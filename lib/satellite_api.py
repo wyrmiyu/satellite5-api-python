@@ -52,13 +52,12 @@ class SatelliteConnector:
             raise           
        
     def __str__(self):
-        return("%s.__api_client = %s\n" \
-               "%s.__session_key = %s\n" % (
+        return("{0}.__api_client = {1}\n" \
+               "{2}.__session_key = {2}\n".format(
                                             self.__class__.__name__,
                                             self.__api_client,
                                             self.__class__.__name__,
-                                            self.__session_key
-                                         )
+                                            self.__session_key )
         )
         
     # Opens connection to satellite
@@ -98,7 +97,8 @@ class SatelliteConnector:
             elif type(args) is str or int or list:
                 return api_call(self.__session_key, args)
             else:
-                e = "Bad object type '%s' for arg: %s\n" % (type(args), args)
+                e = "Bad object type '{0}' ".format(type(args))
+                e = e + "for arg: {0}\n".format(args)
                 e = e + "Supported object types are 'str' and 'tuple'"
                 raise TypeError(e)
         except:
