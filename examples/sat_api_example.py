@@ -11,7 +11,7 @@
 # Written by: Pekka Wallendahl (pwallend@redhat.com)
 # License: GPLv3+, for more info see: http://www.gnu.org/licenses/gpl-3.0.html
 #
-# Import the helper class from sat_conn.py:
+# Import the helper class from satellite_api.py:
 from satellite_api import SatelliteConnector
 
 # Import pretty print module in order to have nicer output for dumps:
