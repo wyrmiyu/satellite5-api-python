@@ -73,10 +73,11 @@ for sys_dict in list_of_systems:
 print(system_id_dict['replaceme.example.com'])
 
 # Now lets try to print a dump of large python object that contains details
-# from satellite systems. In this time as we have to pass the system_id_list
-# as an argumet for API method listActiveSystemsDetails, we have to define for
-# call_api() which of the two is the API method and which one is the list
-# that is passed to API as an argument.
+# from satellite systems. In this case as we have to pass the system_id_list
+# as an argument for the API method listActiveSystemsDetails, we could just
+# enter them in order of call_api(method, args) but it's a good practice to
+# formally define which of the two is the API method and which one is 
+# the list that is passed to API as an argument.
 try:
     system_info = sat.call_api( method='system.listActiveSystemsDetails',
                                 args=system_id_list)
