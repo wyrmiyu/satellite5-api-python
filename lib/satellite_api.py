@@ -24,7 +24,7 @@
 # 
 import xmlrpclib
 import ConfigParser
-aamen
+
 class SatelliteConnector:
 
     def __init__(   self, 
@@ -41,7 +41,6 @@ class SatelliteConnector:
             self.__api_url = 'http://%s/rpc/api' % satellite_server
             self.__login = config.get(satellite_server, 'login')
             self.__password = config.get(satellite_server, 'password')
-aamen
             self.__api_client, self.__session_key = self.__open_connection()
         except:
             raise
