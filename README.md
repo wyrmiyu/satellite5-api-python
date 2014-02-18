@@ -1,4 +1,13 @@
 satellite5-api-python
 =====================
 
-Python written helper modules and examples for Satellite 5 API interaction
+Tools and examples for Red Hat Satellite 5 API interaction written in Python.
+
+
+### Structure
+
+ Directory | Description
+-----------|-----------------
+ examples/ | Example scripts
+ lib/      | Python modules
+
